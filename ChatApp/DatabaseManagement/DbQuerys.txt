@@ -1,0 +1,16 @@
+﻿CREATE DATABASE ChatApp
+USE ChatApp
+
+CREATE TABLE Users
+(
+	userId INT PRIMARY KEY,
+	firstName VARCHAR(255),
+	lastName VARCHAR(255),
+	username VARCHAR(255),
+	password VARCHAR(255),
+	email VARCHAR(255),
+	country VARCHAR(255)
+)
+
+ALTER TABLE Users
+ADD colId int NOT NULL IDENTITY(1,1);

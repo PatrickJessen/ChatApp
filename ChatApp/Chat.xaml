@@ -9,23 +9,11 @@
       Title="Chat">
 
     <Grid Background="#FF343333">
-        <ListBox Name="ListBoxMain" Margin="176,109,182,103" Background="#FF7E7E7E" BorderBrush="#FF95AFFF" Foreground="#FFFDFDFD">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <WrapPanel>
-                        <TextBlock Text="{Binding Username}" FontWeight="Bold" />
-                        <TextBlock Text=": " FontWeight="Bold" />
-                        <TextBlock Text="{Binding Text}" Width="225" TextWrapping="Wrap" HorizontalAlignment="Stretch" />
-                    </WrapPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-            <ListBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <StackPanel VerticalAlignment="Bottom"/>
-                </ItemsPanelTemplate>
-            </ListBox.ItemsPanel>
+        <ListBox Name="listbox" Margin="176,109,182,103" Background="#FF7E7E7E" BorderBrush="#FF95AFFF" Foreground="#FFFDFDFD" DataContextChanged="listbox_DataContextChanged">
+            
         </ListBox>
 
         <TextBox x:Name="textMessage" Margin="176,623,182,31" Background="#FF7E7E7E"></TextBox>
+        <Button Margin="1037,634,97,37" Click="SendMessage">Send</Button>
     </Grid>
 </Page>
